@@ -18,6 +18,7 @@ class App extends Component {
       <SideBar />
       <div style={styles.container}>
         <div style={styles.title}>Most Generous Contributors</div>
+        <div style={styles.dividerSmall}></div>
         <div style={styles.barContainer}>
           {barsSortedByLargest.map((ethAmt,i) => {
             let width = (ethAmt / barsSortedByLargest[0]) * 100
@@ -57,11 +58,10 @@ const styles = {
     fontSize: '2em',
     color: '#232323',
     textAlign: 'center',
-    marginBottom: '1em',
   },
   dividerSmall: {
     width: '20vw',
-    border: '1px solid #232323',
+    border: '1px solid rgb(80,80,80,.8)',
     marginTop: '1em',
     marginBottom: '1em'
   },

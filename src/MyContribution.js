@@ -56,13 +56,13 @@ const styles = {
   },
   dividerSmall: {
     width: '20vw',
-    border: '1px solid #232323',
+    border: '1px solid rgb(80,80,80,.8)',
     marginTop: '1em',
     marginBottom: '1em'
   },
   ethLogo: {
-    width: '100px',
-    height: '100px',
+    width: '140px',
+    height: '140px',
     marginBottom: '1em'
   }
 }

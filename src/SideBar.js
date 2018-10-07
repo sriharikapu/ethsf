@@ -23,7 +23,8 @@ const styles = theme => ({
     overflow: 'hidden',
     position: 'relative',
     display: 'flex',
-    height: '100vh'
+    height: '100vh',
+    borderRight: '1px solid #DCDCDC'
   },
   appBar: {
     zIndex: theme.zIndex.drawer - 2,
@@ -52,6 +53,7 @@ function ClippedDrawer(props) {
   return (
     <div className={classes.root}>
       <AppBar position="absolute" className={classes.appBar}>
+
       </AppBar>
       <Drawer
         variant="permanent"

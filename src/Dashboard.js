@@ -6,19 +6,20 @@ import Bar from './GraphBar'
 import SideBar from './SideBar'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
-const bars = [1.24,3.22,4.44,5,6.53,7.50,8.9,9.1,9.4,12.5]
+const bars = [1.24,3.22,4.44,5,6.53,7.50,8.9,9.1,9.4,12.51]
 
 class App extends Component {
   state = {
-    randomNumber: 376.34
+    randomNumber: 209.34
   }
 
 componentDidMount = () => {
-    setInterval(this.countUp, 1000)
+    setInterval(this.countUp, 1500)
 }
 
 countUp = () => {
   let newNumber = (Math.floor(Math.random() * 1000) / 100)
+  console.log(newNumber);
   let randomNumber = this.state.randomNumber + newNumber
   this.setState({ randomNumber })
 }
@@ -42,7 +43,7 @@ componentWillUnmount = () => {
             <div style={styles.title}>Community Since</div>
             <div style={styles.title}>Oct 1, 2018</div>
             <div style={styles.dividerSmall}></div>
-            <div style={styles.title}>{randomNumber + 'ETH'}</div>
+            <div style={styles.amt}>{randomNumber + 'ETH'}</div>
             <img style={styles.ethLogo} src='https://www.ethereum.org/images/logos/ETHEREUM-ICON_Black_small.png'/>
           </div>
         </div>
@@ -78,14 +79,19 @@ const styles = {
     color: '#232323',
     textAlign: 'center'
   },
+  amt: {
+    fontSize: '3em',
+    color: '#232323',
+    textAlign: 'center'
+  },
   dividerSmall: {
     width: '20vw',
-    border: '1px solid #232323',
+    border: '1px solid rgb(80,80,80,.8)',
     marginTop: '1em',
     marginBottom: '1em'
   },
   ethLogo: {
-    width: '100px',
-    height: '100px'
+    width: '200px',
+    height: '200px'
   }
 }

@@ -24,7 +24,7 @@ class App extends Component {
         <CSSTransition
           key={location.key}
           classNames="fade"
-          timeout={500}
+          timeout={700}
           >
             <div>
         <MenuBar />
