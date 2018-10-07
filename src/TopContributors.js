@@ -22,7 +22,7 @@ class App extends Component {
         <div style={styles.barContainer}>
           {barsSortedByLargest.map((ethAmt,i) => {
             let width = (ethAmt / barsSortedByLargest[0]) * 100
-          return <Bar width={`${width}%`} key={i} amt={ethAmt}/>
+          return <Bar width={`${width}%`} key={i} i={i} amt={ethAmt}/>
         })}
       </div>
     </div>
