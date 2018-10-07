@@ -37,16 +37,17 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
+    justifyContent: 'center',
     marginTop: '2em',
-    marginRight: '1em',
     margin: 'auto',
-    padding: '1em'
+    width: '100vw',
+    height: '90vh'
   },
   rowContainer: {
     display: 'flex',
     flexDirection: 'row',
+    alignItems: 'center',
     height: '100vh',
-    margin: 'auto',
   },
   barContainer: {
     width: '80vw',
