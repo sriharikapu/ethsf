@@ -20,8 +20,14 @@ const styles = {
   },
 };
 
-function MediaCard(props) {
-  const { classes } = props;
+class MediaCard extends React.Component {
+
+  state = {
+    voted: false
+  }
+
+  render() {
+  const { classes } = this.props;
   return (
     <Card className={classes.card}>
       <CardActionArea>
@@ -35,21 +41,24 @@ function MediaCard(props) {
             Kitten
           </Typography>
           <Typography component="p">
-            Kittens are a widespread group of squamate reptiles, with over 6,000 species, ranging
-            across all continents except Antarctica
+            Dreams are shaped by ideals and families shape the beliefs we grasp so strongly. Someday I want to save and change lives through a medical career. Because my family has taught me that change can be positive and radical in altering lives, I hope to hold that ability someday. I seek the power to impro...
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
+        {!this.state.voted && <Button size="small" color="primary" onClick={() => this.setState({ voted: true })}>
           Vote for Me
-        </Button>
+        </Button>}
+        {this.state.voted && <Button size="small" color="primary" onClick={() => this.setState({ voted: false })}>
+          Thanks!
+        </Button>}
         <Button size="small" color="primary">
           Learn More
         </Button>
       </CardActions>
     </Card>
   );
+}
 }
 
 MediaCard.propTypes = {

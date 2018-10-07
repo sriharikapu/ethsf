@@ -4,46 +4,22 @@ import Candidates from './Candidates'
 import MenuBar from './MenuBar'
 import Bar from './GraphBar'
 import SideBar from './SideBar'
+import LineChart from './LineChart'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
-const bars = [1.24,3.22,4.44,5,6.53,7.50,8.9,9.1,9.4,12.5]
-
 class App extends Component {
-  state = {
-    randomNumber: 376.34
-  }
-
-componentDidMount = () => {
-    setInterval(this.countUp, 1000)
-}
-
-countUp = () => {
-  let newNumber = (Math.floor(Math.random() * 1000) / 100)
-  let randomNumber = this.state.randomNumber + newNumber
-  this.setState({ randomNumber })
-}
-
-
-componentWillUnmount = () => {
-    clearInterval(this.interval)
-}
 
   render() {
 
-    let {randomNumber} = this.state
-
-
-    let barsSortedByLargest = bars.sort((a,b) => b > a)
     return (
         <div style={styles.rowContainer}>
           <SideBar />
           <div style={styles.container}>
-            <div style={styles.title}>Total Contributed by</div>
-            <div style={styles.title}>Community Since</div>
-            <div style={styles.title}>Oct 1, 2018</div>
+            <div style={styles.title}>Your Contribution</div>
             <div style={styles.dividerSmall}></div>
-            <div style={styles.title}>{randomNumber + 'ETH'}</div>
+            <div style={styles.title}>{19.43 + 'ETH'}</div>
             <img style={styles.ethLogo} src='https://www.ethereum.org/images/logos/ETHEREUM-ICON_Black_small.png'/>
+            <LineChart />
           </div>
         </div>
     );
@@ -74,7 +50,7 @@ const styles = {
     margin: 'auto',
   },
   title: {
-    fontSize: '3em',
+    fontSize: '2em',
     color: '#232323',
     textAlign: 'center'
   },
@@ -86,6 +62,7 @@ const styles = {
   },
   ethLogo: {
     width: '100px',
-    height: '100px'
+    height: '100px',
+    marginBottom: '1em'
   }
 }

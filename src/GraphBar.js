@@ -8,12 +8,12 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 const GraphBar = props => {
   let { width, avatar } = props
   return (
-    <div>
+    <div style={styles.container}>
       <div style={styles.barContainer}>
-      <img style={styles.avatar} src={'http://placekitten.com/128/128'}/>
-      <div style={{...styles.bar, width}}></div>
-      <div style={styles.amt}>{props.amt + 'ETH'}</div>
-    </div>
+        <img style={styles.avatar} src={'http://placekitten.com/128/128'}/>
+        <div style={{...styles.bar, width}}></div>
+        <div style={styles.amt}>{props.amt + 'ETH'}</div>
+      </div>
     </div>
   )
 }
@@ -21,6 +21,11 @@ const GraphBar = props => {
 export default GraphBar
 
 const styles = {
+  container: {
+    margin: 'auto',
+    alignItems: 'center',
+    width: '90%',
+  },
   barContainer: {
     display: 'flex',
     flexWrap: 'nowrap',
@@ -34,9 +39,9 @@ const styles = {
     borderRadius: '0 .3em .3em 0',
   },
   avatar: {
-    width: '50px',
-    height: '50px',
-    borderRadius: '25px',
+    width: '46px',
+    height: '46px',
+    borderRadius: '23px',
     marginRight: '1vw'
   },
   amt: {

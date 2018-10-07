@@ -60,9 +60,9 @@ function ClippedDrawer(props) {
         }}
       >
         <div className={classes.toolbar} />
-          <MenuItem onClick={handleClose} id='main'>State of the dApp</MenuItem>
-          <MenuItem onClick={handleClose} id='mydash'>My Contribution</MenuItem>
-          <MenuItem onClick={handleClose} id='mining'>Mining Pool</MenuItem>
+          <MenuItem onClick={handleClose} id='dashboard'>State of the dApp</MenuItem>
+          <MenuItem onClick={handleClose} id='mycontribution'>My Contribution</MenuItem>
+          <MenuItem onClick={handleClose} id='top'>Top Contributors</MenuItem>
         <Divider />
       </Drawer>
     </div>
