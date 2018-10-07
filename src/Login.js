@@ -127,6 +127,7 @@ class Login extends Component {
     const { success, error, message } = this.state
 
     return (
+      <div className='App'>
         <form className={classes.container} noValidate autoComplete='off'>
           <SnackBar success={success} error={error} message={message}/>
           <TextField
@@ -137,18 +138,19 @@ class Login extends Component {
           onChange={this.handleChange('name')}
           margin="normal"
         />
-        <TextField
-        id="email"
-        label="Email"
-        className={classes.textField}
-        value={this.state.email}
-        onChange={this.handleChange('email')}
-        margin="normal"
-      />
-      <Button variant="contained" color="secondary" className={classes.button} onClick={this.handleSubmit}>
-        Submit
-      </Button>
-        </form>
+          <TextField
+          id="email"
+          label="Email"
+          className={classes.textField}
+          value={this.state.email}
+          onChange={this.handleChange('email')}
+          margin="normal"
+        />
+        <Button variant="contained" color="secondary" className={classes.button} onClick={this.handleSubmit}>
+          Submit
+        </Button>
+      </form>
+    </div>
     );
   }
 }
