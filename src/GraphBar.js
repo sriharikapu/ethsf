@@ -12,6 +12,7 @@ const GraphBar = props => {
       <div style={styles.barContainer}>
       <img style={styles.avatar} src={'http://placekitten.com/128/128'}/>
       <div style={{...styles.bar, width}}></div>
+      <div style={styles.amt}>{props.amt + 'ETH'}</div>
     </div>
     </div>
   )
@@ -24,7 +25,7 @@ const styles = {
     display: 'flex',
     flexWrap: 'nowrap',
     flexDirection: 'row',
-    marginTop: '1vh',
+    marginTop: '1.4vh',
   },
   bar: {
     height: '6vh',
@@ -37,6 +38,9 @@ const styles = {
     height: '50px',
     borderRadius: '25px',
     marginRight: '1vw'
+  },
+  amt: {
+    marginLeft: '1vw'
   }
 
 }

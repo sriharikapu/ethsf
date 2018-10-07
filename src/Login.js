@@ -64,7 +64,7 @@ const styles = theme => ({
   textField: {
     marginLeft: theme.spacing.unit,
     marginRight: theme.spacing.unit,
-    width: 300,
+    width: 400,
   },
   dense: {
     marginTop: 19,
@@ -73,7 +73,7 @@ const styles = theme => ({
     width: 200,
   },
   button: {
-    marginTop: '2vh'
+    marginTop: '3vh'
   }
 });
 
@@ -132,22 +132,22 @@ class Login extends Component {
         <form className={classes.container} noValidate autoComplete='off'>
           <SnackBar success={success} error={error} message={message}/>
           <TextField
-          id="standard-name"
-          label="Name"
-          className={classes.textField}
-          value={this.state.name}
-          onChange={this.handleChange('name')}
-          margin="normal"
-        />
+            id="email"
+            label="Email"
+            className={classes.textField}
+            value={this.state.email}
+            onChange={this.handleChange('email')}
+            margin="normal"
+          />
           <TextField
-          id="email"
-          label="Email"
-          className={classes.textField}
-          value={this.state.email}
-          onChange={this.handleChange('email')}
-          margin="normal"
-        />
-        <Button variant="contained" color="secondary" className={classes.button} onClick={this.handleSubmit}>
+            id="password"
+            label="Password"
+            className={classes.textField}
+            value={this.state.name}
+            onChange={this.handleChange('password')}
+            margin="normal"
+          />
+        <Button variant="contained" color="secondary" className={classes.button}      onClick={this.handleSubmit}>
           Submit
         </Button>
       </form>

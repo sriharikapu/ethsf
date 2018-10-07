@@ -76,11 +76,11 @@ class MenuAppBar extends React.Component {
             >
               <MenuItem onClick={this.handleClose} id=''>Logout</MenuItem>
               <MenuItem onClick={this.handleClose} id='dashboard'>Dashboard</MenuItem>
-              <MenuItem onClick={this.handleClose} id='submit'>Submit Your Story</MenuItem>
+              <MenuItem onClick={this.handleClose} id='mystory'>Submit Your Story</MenuItem>
               <MenuItem onClick={this.handleClose} id='candidates'>Meet the Candidates</MenuItem>
             </Menu>
             <Typography variant="title" color="inherit" className={classes.grow}>
-
+              Good Minds Change Lives
             </Typography>
             {auth && (
               <div>
