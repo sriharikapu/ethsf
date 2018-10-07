@@ -21,6 +21,7 @@ const styles = {
   },
   grow: {
     flexGrow: 1,
+    textShadow: '2px 3px 4px rgba(0,0,0,.6)'
   },
   menuButton: {
     marginLeft: -12,
