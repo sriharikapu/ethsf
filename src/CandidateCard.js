@@ -11,12 +11,12 @@ import Typography from '@material-ui/core/Typography';
 
 const styles = {
   card: {
-    maxWidth: 500,
+    maxWidth: 700,
     margin: 'auto',
     marginTop: '3vh'
   },
   media: {
-    height: 300,
+    height: 430,
   },
 };
 
@@ -33,20 +33,23 @@ class MediaCard extends React.Component {
       <CardActionArea>
         <CardMedia
           className={classes.media}
-          image="http://placekitten.com/500/300"
+          image={this.props.image}
           title="Contemplative Reptile"
         />
         <CardContent>
           <Typography gutterBottom variant="headline" component="h2">
-            Kitten
+            Jess
           </Typography>
           <Typography component="p">
-            Dreams are shaped by ideals and families shape the beliefs we grasp so strongly. Someday I want to save and change lives through a medical career. Because my family has taught me that change can be positive and radical in altering lives, I hope to hold that ability someday. I seek the power to impro...
+            Dreams are shaped by ideals and families shape the beliefs we grasp so strongly. Someday I want to save and change lives through a medical career. Because my family has taught me that change can be positive and radical in altering lives, I hope to hold that ability someday. I seek the power to improve...
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
-        {!this.state.voted && <Button size="small" color="primary" onClick={() => this.setState({ voted: true })}>
+        {!this.state.voted && <Button size="small" color="primary" onClick={() => {
+           this.setState({ voted: true })
+           this.props.show()
+        }}>
           Vote for Me
         </Button>}
         {this.state.voted && <Button size="small" color="primary" onClick={() => this.setState({ voted: false })}>

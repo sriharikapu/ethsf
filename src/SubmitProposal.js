@@ -31,7 +31,7 @@ const styles = theme => ({
     paddingRight: '1.4em',
     paddingLeft: '1.4em',
     fontSize: '1.2em',
-    backgroundImage: 'linear-gradient(to right, #3F51B5 , #C51162)',
+    backgroundImage: 'linear-gradient(to right, #5945A4, #9E257B)',
   }
 });
 
