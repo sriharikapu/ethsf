@@ -116,6 +116,7 @@ class Login extends Component {
         this.setState({ error: true, message: "Error validating Bloom account" })
       } else if (res === true) {
         this.setState({ success: true, message: "Bloom ID verified!" })
+        this.props.history.push('/dashboard')
       }
     })
   }
