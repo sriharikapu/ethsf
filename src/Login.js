@@ -109,6 +109,10 @@ class Login extends Component {
     this.setState({ [name]: event.target.value })
   }
 
+  go = () => {
+    this.props.history.push('/dashboard')
+  }
+
   handleSubmit = () => {
     const address = this.state.wallet
     console.log('SUBMIT', address);
@@ -120,7 +124,7 @@ class Login extends Component {
         this.setState({ error: true, message: "Error validating Bloom account" })
       } else if (res === true) {
         this.setState({ success: true, message: "Bloom ID verified!" })
-        this.props.history.push('/dashboard')
+        setTimeout(this.go, 500)
       }
     })
   }

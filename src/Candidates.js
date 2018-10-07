@@ -13,7 +13,7 @@ const cardsPlaceholder = ['https://images.pexels.com/photos/762020/pexels-photo-
 'https://www.studentbrands.co.za/wp-content/uploads/2017/07/pexels-photo-101584.jpeg',
 'https://www.tao-u.com/wp-content/uploads/2018/01/pexels-photo-718978-683x1024-1024x585.jpeg',
 'http://beautyandblush.com/wp-content/uploads/2016/08/pexels-photo-88636.jpeg',
-'https://www.rimma.co/wp-content/uploads/2018/07/pexels-photo-1244063.jpeg']  
+'https://www.rimma.co/wp-content/uploads/2018/07/pexels-photo-1244063.jpeg']
 
 class Candidates extends Component {
   state = {
