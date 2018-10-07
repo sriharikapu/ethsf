@@ -80,8 +80,8 @@ const styles = theme => ({
 class Login extends Component {
 
   state = {
-    name: '',
     email: '',
+    password: '',
     success: false,
     error: false
   }
@@ -143,7 +143,7 @@ class Login extends Component {
             id="password"
             label="Password"
             className={classes.textField}
-            value={this.state.name}
+            value={this.state.password}
             onChange={this.handleChange('password')}
             margin="normal"
           />
