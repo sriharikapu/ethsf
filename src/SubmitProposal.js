@@ -73,7 +73,7 @@ class SubmitProposal extends Component {
             label="City"
             className={classes.textField}
             value={this.state.city}
-            onChange={this.handleChange('name')}
+            onChange={this.handleChange('city')}
             margin="normal"
           />
           <TextField
