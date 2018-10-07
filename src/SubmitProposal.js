@@ -49,7 +49,7 @@ class SubmitProposal extends Component {
   }
 
   handleSubmit = () => {
-
+    this.setState({ success: true, message: 'Submitted your story, Good luck!'})
   }
 
   render() {
