@@ -5,6 +5,7 @@ import { withStyles } from '@material-ui/core/styles';
 import { TextField, Button } from '@material-ui/core'
 import abi from './AccountRegistry.js'
 import SnackBar from './Snackbar'
+import Dashboard from './Dashboard'
 
 const Web3 = require('web3')
 
