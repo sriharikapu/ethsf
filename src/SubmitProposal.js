@@ -27,7 +27,11 @@ const styles = theme => ({
     width: 200,
   },
   button: {
-    marginTop: '5vh'
+    marginTop: '5vh',
+    paddingRight: '1.4em',
+    paddingLeft: '1.4em',
+    fontSize: '1.2em',
+    backgroundImage: 'linear-gradient(to right, #3F51B5 , #C51162)',
   }
 });
 

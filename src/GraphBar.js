@@ -35,8 +35,8 @@ const styles = {
   bar: {
     height: '6vh',
     boxShadow: '0 6px 12px rgba(0,0,0,0.19), 0 4px 4px rgba(0,0,0,0.23)',
-    backgroundImage: 'linear-gradient(to right, #3F51B5 , #C51162)',
-    borderRadius: '0 .3em .3em 0',
+    backgroundImage: 'linear-gradient(to right, #C51162, #3F51B5)',
+    borderRadius: '0 .5em .5em 0',
   },
   avatar: {
     width: '46px',
@@ -45,7 +45,8 @@ const styles = {
     marginRight: '1vw'
   },
   amt: {
-    marginLeft: '1vw'
+    marginLeft: '1vw',
+    color: 'rgb(80,80,80,.8)'
   }
 
 }

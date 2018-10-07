@@ -55,7 +55,7 @@ class MenuAppBar extends React.Component {
 
     return (
       <div className={classes.root}>
-        <AppBar position="static">
+        <AppBar position="static" style={{backgroundImage: 'linear-gradient(to right, #3F51B5 , #C51162)'}}>
           <Toolbar>
             <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
               <MenuIcon onClick={this.handleMenu}/>
