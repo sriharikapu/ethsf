@@ -24,7 +24,8 @@ const styles = theme => ({
     position: 'relative',
     display: 'flex',
     height: '100vh',
-    borderRight: '1px solid #DCDCDC'
+    borderRight: '1px solid #DCDCDC',
+    boxShadow: '0 6px 12px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)',
   },
   appBar: {
     zIndex: theme.zIndex.drawer - 2,
