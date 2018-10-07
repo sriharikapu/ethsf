@@ -5,6 +5,7 @@ import MenuBar from './MenuBar'
 import Bar from './GraphBar'
 import SideBar from './SideBar'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import Moment from 'react-moment';
 
 const bars = [1.24,3.22,4.44,5,6.53,7.50,8.9,9.1,9.4,12.51]
 
@@ -39,12 +40,14 @@ componentWillUnmount = () => {
         <div style={styles.rowContainer}>
           <SideBar />
           <div style={styles.container}>
-            <div style={styles.title}>Total Contributed by</div>
-            <div style={styles.title}>Community Since</div>
+            <div style={styles.title}>Total contributed by</div>
+            <div style={styles.title}>community since</div>
             <div style={styles.title}>Oct 1, 2018</div>
             <div style={styles.dividerSmall}></div>
             <div style={styles.amt}>{randomNumber + 'ETH'}</div>
             <img style={styles.ethLogo} src='https://www.ethereum.org/images/logos/ETHEREUM-ICON_Black_small.png'/>
+            <div style={styles.payout}>Next payout</div>
+            <div style={styles.payout}><Moment to="2019-01-01">{Date.now()}</Moment></div>
           </div>
         </div>
     );
@@ -89,6 +92,11 @@ const styles = {
     border: '1px solid rgb(80,80,80,.8)',
     marginTop: '1em',
     marginBottom: '1em'
+  },
+  payout: {
+    fontSize: '3em',
+    color: '#232323',
+    color: 'rgb(80,80,80,.8)',
   },
   ethLogo: {
     width: '200px',
