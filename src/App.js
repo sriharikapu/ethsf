@@ -35,7 +35,7 @@ class App extends Component {
         <Route path="/mycontribution" component={MyContribution} />
         <Route path="/mystory" component={SubmitProposal} />
         <Route path="/top" component={TopContributors} />
-/
+
       </div>
 
   </Router>
