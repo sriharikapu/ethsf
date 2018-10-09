@@ -15,7 +15,7 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <Route render={({ location }) => (
+        {/* <Route render={({ location }) => (
           <div>
             <Route exact path="/" render={() => (
               <Redirect to="/"/>
@@ -25,22 +25,19 @@ class App extends Component {
           key={location.key}
           classNames="fade"
           timeout={700}
-          >
+          > */}
             <div>
         <MenuBar />
-        <Switch location={location}>
+        {/* <Switch location={location}> */}
         <Route exact path="/" component={Login} />
         <Route path="/candidates" component={Candidates} />
         <Route path="/dashboard" component={Dashboard} />
         <Route path="/mycontribution" component={MyContribution} />
         <Route path="/mystory" component={SubmitProposal} />
         <Route path="/top" component={TopContributors} />
-        </Switch>
+/
       </div>
-  </CSSTransition>
-</TransitionGroup>
-</div>
-      )}/>
+
   </Router>
     );
   }

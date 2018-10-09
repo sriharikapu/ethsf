@@ -6,6 +6,7 @@ import { TextField, Button } from '@material-ui/core'
 import abi from './AccountRegistry.js'
 import SnackBar from './Snackbar'
 import Dashboard from './Dashboard'
+const logo = require('./Minds-Logo.png')
 
 const Web3 = require('web3')
 
@@ -78,7 +79,7 @@ const styles = theme => ({
     paddingLeft: '1.4em',
     fontSize: '1.2em',
     backgroundImage: 'linear-gradient(to right, #5945A4, #9E257B)',
-  }
+  },
 });
 
 class Login extends Component {
@@ -124,7 +125,7 @@ class Login extends Component {
         this.setState({ error: true, message: "Error validating Bloom account" })
       } else if (res === true) {
         this.setState({ success: true, message: "Bloom ID verified!" })
-        setTimeout(this.go, 500)
+        setTimeout(this.go, 1000)
       }
     })
   }
@@ -138,6 +139,7 @@ class Login extends Component {
 
     return (
       <div className='App'>
+        <img src={logo}/>
         <form className={classes.container} noValidate autoComplete='off'>
           <SnackBar success={success} error={error} message={message}/>
           <TextField
@@ -155,6 +157,7 @@ class Login extends Component {
             value={this.state.password}
             onChange={this.handleChange('password')}
             margin="normal"
+            type='password'
           />
         <Button variant="contained" color="secondary" className={classes.button}      onClick={this.handleSubmit}>
           Submit
